@@ -1,0 +1,29 @@
+// 初始化属性
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
+}
+// 消除默认边距
+html body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// router-link默认边框清除
+a {
+  text-decoration: none;
+}
+ 
+.router-link-active {
+  text-decoration: none;
+}
+/* 图片添加100%宽度 */
+img {
+  width:100%;
+  height: 100%;
+}
+

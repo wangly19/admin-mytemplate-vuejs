@@ -1,0 +1,90 @@
+// 全局样式
+.flex {
+  display: flex;
+}
+
+.fx-jc-sa {
+  justify-content: space-around;
+}
+
+.fx-jc-bt {
+  justify-content: space-between;
+}
+.fx-it-center{
+  align-items: center;
+}
+.fx-jc-center{
+  justify-content: center;
+}
+
+/* padding styles */
+$number: (
+  1: .5rem,
+  2: 1rem,
+  3: 1.5rem,
+  4: 2rem
+);
+
+
+
+@each $key,$value in $number {
+  .pd-#{$key} {
+    padding: $value !important;
+  }
+}
+
+$direction: (left,top,right,bottom);
+
+@each $item in $direction {
+  @each $key,$val in $number {
+    .pd-#{$item}-#{$key}{
+      padding-#{$item}: $val;
+    }
+  }
+}
+
+/* text-align行内元素方向 */
+$gravity: (left,center,right);
+@each $dire in $gravity {
+  .txt-#{$dire} {
+    text-align: $dire;
+  }
+}
+
+/* 字体大小 */
+@each $key,$val in $number {
+  .ft-#{$key} {
+    font-size: $val;
+  }
+}
+
+$color: (
+  main: #007AFF,
+  text: #333333,
+);
+
+@each $key,$val in $color {
+  .tx-#{$key} {
+    color: $val;
+  }
+}
+
+
+/* 容器充满 */
+.wd-all{
+  width: 100%;
+}
+.hg-all{
+  height: 100%;
+}
+
+.vh-100{
+  height: 100vh;
+}
+
+// 浮动
+@each $item in (left,center,right) {
+  .float-#{$item}{
+    float: $item;
+  }
+}
